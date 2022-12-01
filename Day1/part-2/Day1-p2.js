@@ -12,4 +12,11 @@ myString.split("\n").forEach((item) => {
 });
 
 let result_part1 = Math.max(...myArrOfElves); // Task - 1:
-console.log(result_part1);
+
+let newElvesArr = myArrOfElves.sort((a, b) => {
+  return b - a;
+});
+
+let result_part2 = newElvesArr[0] + newElvesArr[1] + newElvesArr[2]; // Task - 2:
+
+console.log(result_part1, result_part2);
